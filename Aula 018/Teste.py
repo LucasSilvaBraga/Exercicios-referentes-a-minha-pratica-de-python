@@ -1,6 +1,12 @@
 
-ListaComposta = [["Luc", 50], ["Vic", 20]]
+Valores = []
+Par = [8]
+Impar = 3
 
-ListaComposta.insert(3, ["Pongo", 10])
-print(ListaComposta)
-print(len(ListaComposta))
+Valores.insert([0][0], Par)
+Valores.insert([1][0], Impar)
+Valores.insert([0][0], 2)
+
+print(Valores)
+
+#Para inicializar uma lista composta um primeiro elemento deve ser introduzido atravez de uma lista

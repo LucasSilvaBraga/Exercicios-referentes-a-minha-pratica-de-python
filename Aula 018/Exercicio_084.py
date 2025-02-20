@@ -24,33 +24,28 @@ while FlagContinuar != 'n':
         while Contador != -1:
             if MatrizMaisPesados[Contador][1] > ListaPessoa[1]:
                 MatrizMaisPesados.insert(Contador + 1, ListaPessoa[:])
-                print(f"Matriz mais pesados1: {MatrizMaisPesados}")
                 break
             Contador -= 1
         if Contador == -1:
-            MatrizMaisPesados.append(ListaPessoa[:])
-            print(f"Matriz mais pesados2: {MatrizMaisPesados}")
+            MatrizMaisPesados.insert(0, ListaPessoa[:])
+            
 
     #Matriz mais leves
     if len(MatrizMaisLeves) > 0:
         Contador = 0
         while Contador != len(MatrizMaisLeves):
-            if MatrizMaisPesados[Contador][1] > ListaPessoa[1]:
+            if MatrizMaisLeves[Contador][1] > ListaPessoa[1]:
                 MatrizMaisLeves.insert(Contador , ListaPessoa[:])
-                print(f"Matriz mais leves1: {MatrizMaisLeves}")
                 break
             Contador += 1
         if Contador == len(MatrizMaisLeves):
-            MatrizMaisLeves.insert(0, ListaPessoa[:])
-            print(f"Matriz mais leves2: {MatrizMaisLeves}")
+            MatrizMaisLeves.append(ListaPessoa[:])
 
     #Segundo caso: nenhum valor no ranking de mais leves ou mais pesados foi incluido ainda
     if len(MatrizMaisPesados) == 0:
         MatrizMaisPesados.append(ListaPessoa[:])
-        print(f"Matriz mais pesados3: {MatrizMaisPesados}")
     if len(MatrizMaisLeves) == 0:
         MatrizMaisLeves.append(ListaPessoa[:])
-        print(f"Matriz mais leves3: {MatrizMaisLeves}")
     
     
     #Verificando se o usuario deseja continuar digitando valores
@@ -60,8 +55,12 @@ while FlagContinuar != 'n':
     elif FlagContinuar not in 'ns':
         FlagContinuar = input("Digite uma resposta valida. Deseja continuar cadatrando pessoas? (s/n):").lower()
 
-print(f"Matriz mais leves {MatrizMaisLeves}")
-print(f"Matriz mais pesados {MatrizMaisPesados}")
-
+print("-=" * 30)
+print(f"Listagem dos mais leves: {MatrizMaisLeves}")
+print("-=" * 30)
+print(f"Listagem dos mais pesados: {MatrizMaisPesados}")
+print("-=" * 30)
+print(f"Foram cadastradas: {len(MatrizMaisPesados)} pessoas")
+print("-=" * 30)
 
 #Pesquisar depois o funcionamento da flag continuar
