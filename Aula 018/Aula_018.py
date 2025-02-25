@@ -4,6 +4,7 @@
 
 #ADICIONANDO UMA LISTA DENTRO DE OUTRA PARA CRIAR UMA LISTA COMPOSTA
 #Criando a lista 'teste' e adicionando dois elementos a ela
+#Uma lista tambem pode ser declarada utilizando Teste = list()
 Teste = []
 Teste.append('Gustavo')
 Teste.append(40)
@@ -24,7 +25,7 @@ Galera.append(Teste[:])
 print(Galera)
 print(Teste)
 
-
+#Obs: e possivel ter uma lista composta que possua listas simples e elementos
 
 
 #UTILIZANDO INDICES PARA RETORNAR DETERMINADOS ELEMENTOS NA LISTA COMPOSTA
