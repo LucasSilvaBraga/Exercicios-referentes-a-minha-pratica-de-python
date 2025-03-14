@@ -95,5 +95,8 @@ if FlagInsercaoManual == 's':
 
 
 
-
+#Lembrando que para atribuir uma dicionario a outra estrutura e preciso utiilizar o metodo .copy()
 #Notas: Dicionarios são listas em que referenciamos os indices por nomes e nao por numeros
+
+#CONCEITO IMPORTANTE PARA ESTRUTURAS DE ARMAZENAMENTO
+#Notas2: Para adicionarmos um elemento a uma lista simples utilizamos .append() ou .insert | Para adicionarmos uma lista simples a outra estrutura utilizamos .appen([:]) com fatiamento | Para adicionarmos um dicionario a outra estrutura utilizamos o metodo .copy
